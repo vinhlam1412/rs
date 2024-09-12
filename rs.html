@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>KFC Games</title>
+    <meta name="theme-color" content="#FFF9FA" />
+    <script type="module" crossorigin src="/assets/app-B5K2h4GE.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/app-Bz5Wv98m.css">
+  </head>
+
+  <body class="background-container">
+    <div class="Container">
+      <!--      Control-->
+      <div id="Control" class="Control" style="display: none">
+        <div id="Header" class="Header">
+          <div class="flex">
+            <button class="btn btn-back">
+              <img src="/assets/back-MA0dTR0G.png" alt="" />
+            </button>
+            <img class="logo" src="/assets/kfc-logo-DlSlFbUX.png" alt="" />
+          </div>
+          <button class="btn btn-rule" data-dialog-target="DialogRule">
+            Luật chơi
+          </button>
+        </div>
+        <div class="GameName">
+          <h1 class="title">Nhảy dây</h1>
+        </div>
+        <div class="BgControl"></div>
+        <div id="Menu" class="Menu">
+          <button id="PlayTest" type="button" class="btn btn-secondary">
+            Tập luyện
+          </button>
+          <button id="Play" type="button" class="btn btn-primary">
+            Chơi Ngay
+          </button>
+        </div>
+      </div>
+      <!--      GameBoard-->
+      <div id="GameBoard" class="GameBoard">
+        <div id="HeaderGameBoard" class="Header HeaderGameBoard">
+          <div class="flex">
+            <img class="logo" src="/assets/kfc-logo-DlSlFbUX.png" alt="" />
+          </div>
+        </div>
+        <div class="flex justify-content-center">
+          <div class="ScoreBox">
+            <span id="Score" class="Score">0</span><span>ĐIỂM</span>
+          </div>
+        </div>
+        <div class="Status">
+          <img
+            class="Avatar"
+            id="Avatar"
+            src="/assets/avatar-D1ay6UBb.png"
+            alt=""
+          />
+          <div id="Progress" class="Progress">
+            <div class="Progress-Done"></div>
+          </div>
+          <div class="TimeBox"><span id="Time" class="Time">0</span></div>
+        </div>
+        <div class="Playground" id="Playground">
+          <img
+            id="Rope"
+            class="rope"
+            src="/assets/rope-BaSMRUF_.png"
+            alt="A Swing rope"
+          />
+          <img
+            id="Character"
+            class="character"
+            src="/assets/character-BV-L3KDX.png"
+            alt="A KFC man"
+          />
+        </div>
+      </div>
+
+      <!-- Wheel -->
+      <div id="app">
+        <div id="WheelScreen" class="WheelContainer" style="display: none">
+          <!-- Control-->
+          <div id="WheelControl" class="Control" style="background: none">
+            <div id="WheelHeader" class="Header">
+              <div class="flex">
+                <img
+                  class="logo"
+                  src="/assets/kfc-logo-DlSlFbUX.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="GameName">
+              <h1 class="title">
+                VÒNG QUAY<br />
+                MAY MẮN
+              </h1>
+              <p>
+                Chúc mừng bạn hoàn thành thử thách.<br />
+                Quay vòng quay để nhận giải thôi!
+              </p>
+            </div>
+          </div>
+          <div id="wheel">
+            <img id="arrow" src="/assets/arrow-D-vNnDTO.svg" alt="" />
+            <svg id="wheel-circle">
+              <defs>
+                <linearGradient
+                  id="paint1_linear_2014_2106"
+                  x1="83.2646"
+                  y1="57.8447"
+                  x2="304.353"
+                  y2="278.935"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#FFF890" />
+                  <stop offset="0.14" stop-color="#FBE678" />
+                  <stop offset="0.24" stop-color="#F8D865" />
+                  <stop offset="0.28" stop-color="#DFB955" />
+                  <stop offset="0.34" stop-color="#C19140" />
+                  <stop offset="0.4" stop-color="#AB7532" />
+                  <stop offset="0.45" stop-color="#9D6429" />
+                  <stop offset="0.49" stop-color="#995E26" />
+                  <stop offset="0.52" stop-color="#9C6329" />
+                  <stop offset="0.55" stop-color="#A87232" />
+                  <stop offset="0.59" stop-color="#BA8C42" />
+                  <stop offset="0.64" stop-color="#D4B058" />
+                  <stop offset="0.68" stop-color="#F5DD73" />
+                  <stop offset="0.69" stop-color="#FBE578" />
+                  <stop offset="0.77" stop-color="#FFFDAA" />
+                  <stop offset="0.83" stop-color="#FBE578" />
+                  <stop offset="1" stop-color="#A45221" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div id="WheelMenu" class="Menu">
+            <button id="Spin" class="btn btn-primary">QUAY Ô MAY MẮN</button>
+          </div>
+        </div>
+        <div
+          id="WheelResultScreen"
+          class="WheelContainer"
+          style="display: none"
+        >
+          <!-- Control-->
+          <div id="WheelResultControl" class="Control" style="background: none">
+            <div id="WheelResultHeader" class="Header">
+              <div class="flex">
+                <img
+                  class="logo"
+                  src="/assets/kfc-logo-DlSlFbUX.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="GameName"></div>
+          </div>
+          <div id="WheelGift" class="WheelGift">
+            <h1 class="title">CHÚC BẠN MAY<br />MẮN LẦN SAU</h1>
+            <p>
+              Hy vọng bạn hài lòng<br />với những trải nghiệm khó quên<br />cùng
+              “Hành Trình Ký Ức” của KFC
+            </p>
+            <img src="/assets/sector-1-ZVSpYhLr.png" alt="" />
+          </div>
+          <div id="WheelResultMenu" class="Menu">
+            <button id="ReceiveMore" type="button" class="btn btn-primary">
+              NHẬN THÊM ƯU ĐÃI
+            </button>
+            <button id="Restart" type="button" class="btn btn-primary">
+              CHƠI TIẾP
+            </button>
+            <button id="ShareResult" class="btn btn-secondary">
+              CHIA SẺ KẾT QUẢ
+            </button>
+            <a href="javascript:void(0)" id="ReceiveMoreLink"
+              >Nhận thêm ưu đãi khác</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Dialog-->
+      <div class="Dialog" id="DialogFinish">
+        <div class="Dialog-Backdrop"></div>
+        <div class="Dialog-Content">
+          <div class="ScoreBox ScoreBoxDialog">
+            <span id="ScoreDialog" class="Score">0</span><span>ĐIỂM</span>
+          </div>
+          <p></p>
+          <button type="submit" class="btn btn-main"></button>
+        </div>
+      </div>
+      <!-- Rule -->
+      <div class="Rule" id="DialogRule" data-dialog-id="DialogRule">
+        <div class="flex flex-column h-full">
+          <div class="Header">
+            <button class="btn btn-back" data-dialog-target="DialogRule">
+              <img src="/assets/back-MA0dTR0G.png" alt="" />
+            </button>
+            <h6>LUẬT CHƠI</h6>
+            <img
+              class="img-rule-top"
+              src="/assets/icon-rule-rs-uMpTrlYh.svg"
+              alt=""
+            />
+          </div>
+          <div class="Content">
+            <div class="list-item">
+              <span class="icon-l"></span>
+              <span
+                >Bạn sẽ có 1 lần TẬP LUYỆN
+                <span class="strong">(không tính lượt chơi)</span> và 1 lần CHƠI
+                NGAY <span class="strong">(1 lượt chơi)</span>.</span
+              >
+            </div>
+            <div class="tabs">
+              <div class="tab-buttons">
+                <button class="btn tab-button" data-tab-id="task-tab">
+                  NHIỆM VỤ
+                </button>
+                <button class="btn tab-button active" data-tab-id="score-tab">
+                  CÁCH LẤY ĐIỂM
+                </button>
+              </div>
+
+              <div id="task-tab" class="tab-content">
+                <div class="list-item">
+                  <span class="icon-m"></span>
+                  <span
+                    >Nhanh tay, tinh mắt chạm vào màn hình để ông Colonel nhảy
+                    lên khỏi mặt đất sao cho không chạm sợi mì ý. Vòng dây sẽ
+                    quay nhanh dần theo thời gian. Chạm 1 lần để nhảy qua sợi mỳ
+                    ý, chạm 2 lần để nhảy cao hơn nhé.</span
+                  >
+                </div>
+                <div class="list-item">
+                  <span class="icon-m"></span>
+                  <span
+                    >Trong quá trình chơi game sẽ xuất hiện các vật phẩm đặc
+                    biệt có thể giúp cộng thêm và trừ bớt điểm của bạn, hãy chú
+                    ý nhé!</span
+                  >
+                </div>
+                <div class="list-item">
+                  <span class="icon-m"></span>
+                  <span
+                    >Hoàn thành lượt chơi trong vòng 30s và tham gia vòng quay
+                    may mắn để nhận các phần quà cực kỳ hấp dẫn từ KFC.</span
+                  >
+                </div>
+                <div class="list-item">
+                  <span class="icon-l"></span>
+                  <span
+                    >Sau khi hoàn thành thử thách trong vòng 30s, bạn sẽ có cơ
+                    hội tham gia vòng quay may mắn để nhận quà từ KFC.</span
+                  >
+                </div>
+              </div>
+              <div id="score-tab" class="tab-content" style="display: none">
+                <div class="list-item">
+                  <span class="icon-l"></span>
+                  <span class="text-uppercase font-bold">Cách lấy điểm</span>
+                </div>
+                <div class="list-item-lv2">
+                  <span>Ăn </span
+                  ><img src="/assets/bucket-C7dVV7Ki.png" alt="" />
+                  <span> = +20 điểm </span>
+                </div>
+                <div class="list-item-lv2">
+                  <span>Ăn</span
+                  ><img src="/assets/popcorn-C0n4ASlP.png" alt="" />
+                  <span> = +10 điểm</span>
+                </div>
+                <div class="list-item-lv2">
+                  <span>Nhảy qua được một vòng = + 5 điểm.</span>
+                </div>
+                <div class="list-item">
+                  <span class="icon-l"></span>
+                  <span class="text-uppercase font-bold">Mất điểm</span>
+                </div>
+                <div class="list-item-lv2">
+                  <span>Chạm vào sợi mì ý</span
+                  ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAU1SURBVHgB7ZdZbFRlGIbf75yZzmlnuneg0LJUtGArQqCihGiBkMoigrKoSGKQkFYukCujiYlClJhgVIx4I5LgkkhJaFjatBbTxgVZjEQwBWxpi4RO92Wm0852zuc3Q+LSNhYIQYj/Mzcz8y/nf7/l/WcAhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUJxfXCZsZFr3C7c5XAFHFzpnDH6xFNFzFXJVVwDG+5S+GTRQj63/opVV8JDx7RhkyesAmcuKwr6HS/jLoTLk9ZxxpwKTivMRsqsYeMjZJHA7gVwtFWt5q/T/DC72qDbTlLRQAvuUPin8Qlo73kQNi2JLef7CHodpHcDcWnD5g4XzLpIjoCTZz4E98JHAAt0+csAH2rcQCtCX+EOgkuhI9nYiD7jbXbPzyBHKijoA/rOAT0/gC3NN3TNCBmOSJJt4KRcwkCDRelzNc7daqBx7w5fad03LlemF0sawkQSif8aI24VOybuRs5mGzQnWDPl7LpEQo5mMbhxd8PQJcMEU9On/ewudGn2MRo6KsCpc8GkgbKW5jgD7d9ySs5UOjHWw7X9r6M99zNae8DEbYIPOcdCM0uQPG0y4nP8VveJuWRPstFgj1SkAZgaWBRpoX7gavkA+S98MHQPGrZpVdwDCNnXWcbYFC3YsgAz3pnGWvw1e7v8BZAuVe6aAgS6QRd3fu8PhlY7E63JCMt4wFlHKzp9uEVwqVyPzgEXbH4fLMMNu7ucs1fnITFPTi4GbEms++uBliOgaNjT8z0Idejoa7wAq2sXLQkdHFXw3/HuT1jpGp93EJOeJ+iJgO8MyNsAzloD6R7AcwzkKTORPFsaXyIy2NCKUO+rtCSwj0vX6HAfIFoQ7ZEbFPqmhHeOsR1aQjES7nGBIr9hsD4E9+ICK3ORHNr21/GltyjgBS59FGn7vXVW5gb/uX/bm0Z9eGXcK4ib+BqnFqRAc4B7z/ZrUza7oqVD0dI5/xasKcWghEkyOyAGVwb0/rgTidMWc9L0VDIjdfL5CJppD7KvzkREexq2RIJp1sLbUwnDKIRm2wYjeQ70BC+kbczIoEvPfLSIs56LHZFMS9qyT4zoO4bfE0BKvp3i77OxLocYvAJqr+2yvBff058I7RhNz6iCY6KPuu4XM5uNCAXM+LSAPq6wjNPm2WJZ7TwO8teDJ70YK7PoS2v6BOycCoyZL0YiG8iNpp1/9xKS8idz9kodjmSJTWcE3uZj5Dkwi3OKx8CVey1h4V6grUrGG6WS1gPx2dfaiWXQir0B1e/owWDXdtj1PISCbbLoIC0Nn7keLdcl+B/i5XnWUcdmLePhbZw6O53ikk1c2tuM3C1ZbE80KHq6QAfQ+DEwoRicmCVrTGjdp4COavC9W0WA/HLVpAc1cVNPjQRMzHTSs3IjumIlGmPAA2qttNg5MUSpBQaTXSqqS/r18AC6zpfQU+HPcRPcsOA/hVfHTZeM54hx9CI14VeY499A+vwt7MoX73eCek4DXael3DdBiyZHUq21VosxnJLvXgLZ08VVo48Xt2uvFtFNEqBnwPYUKRxxWzMMaqmIhFtrNtnjknziGQUI93bCtB+m5d563CQ3LXgkuNxRAiPzSehGBoIDPyPk2YfMx3cio3AeO1LAgXZoDR9KZvVfMG7xDE6QMrYiEpzjkv3as3CM24f4CZLqsBu+ZnHcnl20fHA/biG3VPBIxP6EhIzHEKZ86HKPmFSJZYEmVNgWSV++IOXgkCY5Bn9wD63FbbvTFQqFQqFQKBQKhUKh+D/xB86xA2RLjydOAAAAAElFTkSuQmCC" alt="" /><span>
+                    = -5 điểm</span
+                  >
+                </div>
+                <div class="list-item-lv2">
+                  <span>Chạm trứng</span>
+                  <img src="data:image/png;base64,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" alt="" /><span>
+                    = -10 điểm</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-content-center">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dialog-target="DialogRule"
+              >
+                ĐÃ HIỂU
+              </button>
+            </div>
+          </div>
+          <img
+            class="img-rule-bottom"
+            src="/assets/icon-rule-bottom-BfgCdBXP.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Countdown-->
+      <div id="CountdownWrapper" class="Dialog Dialog_Countdown">
+        <div class="Dialog-Backdrop"></div>
+        <div class="Countdown"></div>
+      </div>
+    </div>
+    <div class="loading" id="Loading">
+      <div class="loading-backdrop"></div>
+      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20xmlns='http://www.w3.org/2000/svg'%3e%3cstyle%3e.spinner_Wezc{transform-origin:center;animation:spinner_Oiah%20.75s%20step-end%20infinite}@keyframes%20spinner_Oiah{8.3%25{transform:rotate(30deg)}16.6%25{transform:rotate(60deg)}25%25{transform:rotate(90deg)}33.3%25{transform:rotate(120deg)}41.6%25{transform:rotate(150deg)}50%25{transform:rotate(180deg)}58.3%25{transform:rotate(210deg)}66.6%25{transform:rotate(240deg)}75%25{transform:rotate(270deg)}83.3%25{transform:rotate(300deg)}91.6%25{transform:rotate(330deg)}100%25{transform:rotate(360deg)}}%3c/style%3e%3cg%20class='spinner_Wezc'%20fill='%23fff'%3e%3ccircle%20cx='12'%20cy='2.5'%20r='1.5'%20opacity='.14'/%3e%3ccircle%20cx='16.75'%20cy='3.77'%20r='1.5'%20opacity='.29'/%3e%3ccircle%20cx='20.23'%20cy='7.25'%20r='1.5'%20opacity='.43'/%3e%3ccircle%20cx='21.50'%20cy='12.00'%20r='1.5'%20opacity='.57'/%3e%3ccircle%20cx='20.23'%20cy='16.75'%20r='1.5'%20opacity='.71'/%3e%3ccircle%20cx='16.75'%20cy='20.23'%20r='1.5'%20opacity='.86'/%3e%3ccircle%20cx='12'%20cy='21.5'%20r='1.5'/%3e%3c/g%3e%3c/svg%3e" alt="" />
+    </div>
+  </body>
+</html>
